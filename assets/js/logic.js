@@ -364,6 +364,22 @@ modxbtn.addEventListener("click", () => {
 });
 
 
+// this function will return fectorial of given number
+fectorialbtn.addEventListener("click", () => {
+    if (display.textContent < 0) {
+        return NaN; // Error: factorial of negative number is undefined
+    }
+    if (display.textContent === 0 || display.textContent === 1) {
+        return 1; // Base case: factorial of 0 or 1
+    }
+    let result = 1;
+    for (let i = 2; i <= display.textContent; i++) {
+        result *= i;
+    }
+    return display.textContent = result;
+});
+
+
 // this function return exponential of given input number
 expbtn.addEventListener("click", () => {
     display.textContent = Math.exp(display.textContent)
