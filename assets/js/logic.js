@@ -282,6 +282,38 @@ exponentbtn.addEventListener("click", () => {
     }
 })
 
+
+function finalResult() {
+    var input = display.textContent;
+
+    // display.value = display.value.replaceAll("**", "^");
+
+    var value = input;
+
+    console.log(value);
+
+    try{
+        function calculate(inputExpression) {
+            return new Function("return " + inputExpression)();
+        }
+        
+        const result = calculate(value);
+        console.log(result)
+        
+        display.innerHTML = result;
+    }
+    catch (error) {
+
+        display.textContent = "Invalid Input!";
+
+    setTimeout(() => {
+        display.textContent = ""; 
+        document.getElementById("input_display").value = "";
+    }, 2000);
+    }
+}
+
+
 // this function returns rounds a number DOWN to the nearest integer:
 floorbtn.addEventListener("click", () => {
     display.textContent = Math.floor(display.textContent)
