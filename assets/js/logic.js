@@ -332,6 +332,37 @@ lnbtn.addEventListener("click", () => {
 });
 
 
+// this function returns the value of a base raised to a power
+xsqurebtn.addEventListener("click", () => {
+    display.textContent = Math.pow(display.textContent, 2)
+});
+
+
+// this function returns square root of given number
+squarerootbtn.addEventListener("click", () => {
+    display.textContent = Math.sqrt(display.textContent)
+});
+
+
+// this function returns the value of a base raised to a power 10
+tenpowerxbtn.addEventListener("click", () => {
+    display.textContent = Math.pow(10, display.textContent)
+});
+
+
+// this function is divide 1 by the number which user can give.
+oneuponxbtn.addEventListener("click", () => {
+    display.textContent = 1 / display.textContent;
+});
+
+
+// this function convert negative value to positive value
+modxbtn.addEventListener("click", () => {
+    if (display.textContent.charAt(0) === "-") {
+        display.textContent = display.textContent.slice(1)
+    }
+});
+
 
 // this function return exponential of given input number
 expbtn.addEventListener("click", () => {
