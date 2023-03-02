@@ -324,3 +324,32 @@ cscbtn.addEventListener("click", () => {
     }
 });
 // Trigonometry Function End here
+
+
+// this function is erase one value from the back of any displayed value
+backEraseButton.addEventListener("click", () => {
+    display.textContent = "";
+    displayArray.pop();
+    tempSpanVariable = document.createElement('span');
+    tempSpanVariable.classList.add('colored-text');
+
+    for (let i = 0; i < displayArray.length; i++) {
+        tempSpanVariable.append(displayArray[i].textContent)
+
+        display.append(tempSpanVariable)
+    }
+    characterCounter--
+
+    if (characterCounter < 0) {
+        characterCounter = tempcharacterCounter
+    }
+})
+
+
+// this function is for clear screen
+clearScreen.addEventListener('click', () => {
+    display.innerHTML = '';
+    characterCounter = 0;
+    displayArray = [];
+})
+
