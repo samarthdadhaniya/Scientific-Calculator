@@ -537,3 +537,58 @@ clearScreen.addEventListener('click', () => {
     displayArray = [];
 })
 
+
+// Memory Function Start Here...
+function Enable_MC_MR_Btn() {
+    document.querySelector('#MemoryClear').disabled = false;
+    document.querySelector('#MemoryRead').disabled = false;
+}
+
+
+MemoryStoreBtn.addEventListener('click', () => {
+    Enable_MC_MR_Btn();
+
+    if (parseFloat(display.textContent) == NaN) {
+        alert("Enter a number");
+    } else {
+        memoryArray.push(parseFloat(display.textContent));
+    }
+    display.textContent = "";
+});
+
+
+MemoryReadBtn.addEventListener('click', () => {
+    display.textContent = memoryArray[memoryArray.length - 1];
+});
+
+
+MemoryClearBtn.addEventListener('click', () => {
+    memoryArray = [];
+    document.querySelector('#MemoryClear').disabled = true;
+    document.querySelector('#MemoryRead').disabled = true;
+    display.textContent = "";
+})
+
+
+MemoryPluseBtn.addEventListener('click', () => {
+    Enable_MC_MR_Btn();
+
+    if (memoryArray.length == 0) {
+        memoryArray.push(parseFloat(display.textContent));
+    } else {
+        memoryArray[memoryArray.length - 1] += parseFloat(display.textContent);
+    }
+})
+
+
+MemoryMinusBtn.addEventListener('click', () => {
+    Enable_MC_MR_Btn();
+
+    if (memoryArray.length == 0) {
+        memoryArray.push(parseFloat(display.textContent));
+    } else {
+        memoryArray[memoryArray.length - 1] -= parseFloat(display.textContent);
+    }
+})
+
+// Memory Function End Here...
