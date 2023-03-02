@@ -239,6 +239,16 @@ exponentbtn.addEventListener("click", () => {
     }
 })
 
+// this function returns rounds a number DOWN to the nearest integer:
+floorbtn.addEventListener("click", () => {
+    display.textContent = Math.floor(display.textContent)
+});
+
+
+// this function returns rounds a number Up to the nearest integer:
+ceilbtn.addEventListener("click", () => {
+    display.textContent = Math.ceil(display.textContent)
+});
 
 
 // FE_Button
