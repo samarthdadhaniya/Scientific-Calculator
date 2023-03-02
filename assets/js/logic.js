@@ -1,7 +1,50 @@
 const display = document.querySelector("#input_display");
 
-// getting number by id------------------------------------
+let second_button = 0;
 
+document.getElementById('xcube').style.display = "none";
+document.getElementById('cuberoot').style.display = "none";
+document.getElementById('expmone').style.display = "none";
+document.getElementById('tworestoox').style.display = "none";
+document.getElementById('logonep').style.display = "none";
+document.getElementById('eraisedtoox').style.display = "none";
+
+
+function display_2nd() {
+    if (second_button == 0) {
+        document.getElementById('xcube').style.display = "block";
+        document.getElementById('cuberoot').style.display = "block";
+        document.getElementById('expmone').style.display = "block";
+        document.getElementById('tworestoox').style.display = "block";
+        document.getElementById('logonep').style.display = "block";
+        document.getElementById('eraisedtoox').style.display = "block";
+
+        document.getElementById('xsqurebtn').style.display = "none";
+        document.getElementById('squareroot').style.display = "none";
+        document.getElementById('exponent').style.display = "none";
+        document.getElementById('tenpowerx').style.display = "none";
+        document.getElementById('logbtn').style.display = "none";
+        document.getElementById('lnbtn').style.display = "none";
+        second_button = 1
+    } else {
+        document.getElementById('xsqurebtn').style.display = "block";
+        document.getElementById('squareroot').style.display = "block";
+        document.getElementById('exponent').style.display = "block";
+        document.getElementById('tenpowerx').style.display = "block";
+        document.getElementById('logbtn').style.display = "block";
+        document.getElementById('lnbtn').style.display = "block";
+
+        document.getElementById('xcube').style.display = "none";
+        document.getElementById('cuberoot').style.display = "none";
+        document.getElementById('expmone').style.display = "none";
+        document.getElementById('tworestoox').style.display = "none";
+        document.getElementById('logonep').style.display = "none";
+        document.getElementById('eraisedtoox').style.display = "none";
+        second_button = 0;
+    }
+}
+
+// getting number by id------------------------------------
 const zero = document.querySelector("#zero_Number");
 const one = document.querySelector("#one_Number");
 const two = document.querySelector("#two_Number");
