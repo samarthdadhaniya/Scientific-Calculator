@@ -264,4 +264,53 @@ degreebtn.addEventListener("click", () => {
     }
 })
 
+
 // Trigonometry Function starts here
+sinbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = (Math.sin((Math.PI / 180) * Number(display.textContent)));
+    } else {
+        display.textContent = Math.sin(display.textContent)
+    }
+});
+
+cosbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = (Math.cos((Math.PI / 180) * Number(display.textContent)));
+    } else {
+        display.textContent = Math.cos(display.textContent)
+    }
+});
+
+tanbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = (Math.tan((Math.PI / 180) * Number(display.textContent)));
+    } else {
+        display.textContent = Math.tan(display.textContent)
+    }
+});
+
+secbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = 1 / (Math.cos(Math.PI / 180 * display.textContent));
+    } else {
+        display.textContent = 1 / Math.cos(display.textContent)
+    }
+});
+
+cotbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = 1 / (Math.tan(Math.PI / 180 * display.textContent));
+    } else {
+        display.textContent = 1 / Math.tan(display.textContent)
+    }
+});
+
+cscbtn.addEventListener("click", () => {
+    if (degrad) {
+        display.textContent = 1 / (Math.sin(Math.PI / 180 * display.textContent));
+    } else {
+        display.textContent = 1 / Math.sin(display.textContent)
+    }
+});
+// Trigonometry Function End here
