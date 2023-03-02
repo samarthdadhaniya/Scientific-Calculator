@@ -313,7 +313,25 @@ function finalResult() {
     }
 }
 
-// --------------------------------
+
+// this function is generate random value between 0 to 1 
+randombtn.addEventListener("click", () => {
+    display.textContent = Math.random();
+});
+
+
+// this function returns the base 10 logarithm of a any number
+logbtn.addEventListener("click", () => {
+    display.textContent = Math.log10(display.textContent)
+});
+
+
+// this function returns the natural logarithm of a number
+lnbtn.addEventListener("click", () => {
+    display.textContent = Math.log(display.textContent)
+});
+
+
 
 // this function return exponential of given input number
 expbtn.addEventListener("click", () => {
