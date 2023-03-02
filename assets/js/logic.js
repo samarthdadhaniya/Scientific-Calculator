@@ -1,6 +1,14 @@
-const display = document.querySelector("#input_display");
+/*--------------------------------------------
 
-let second_button = 0;
+Name : samarth dadhaniya
+Stack : react.js
+Project title : Scientific Calculator
+GitHub : https://github.com/samarthdadhaniya/
+
+----------------------------------------------*/
+
+const display = document.querySelector("#input_display"); // selecting display element with it's ID
+
 
 document.getElementById('xcube').style.display = "none";
 document.getElementById('cuberoot').style.display = "none";
@@ -9,7 +17,12 @@ document.getElementById('tworestoox').style.display = "none";
 document.getElementById('logonep').style.display = "none";
 document.getElementById('eraisedtoox').style.display = "none";
 
-
+let second_button = 0;
+/**
+ * @function display_2nd
+ * @description this is hide html element when second_button value is 1
+ * @params none
+ */
 function display_2nd() {
     if (second_button == 0) {
         document.getElementById('xcube').style.display = "block";
@@ -104,17 +117,19 @@ const expmonebtn = document.querySelector('#expmone');
 const tworestooxbtn = document.querySelector('#tworestoox');
 const logonepbtn = document.querySelector('#logonep');
 const eraisedtooxbtn = document.querySelector('#eraisedtoox');
+const sigchangebtn = document.querySelector('#sigchange');
+// ----------------------------------------------------------
 
+// getting trignomitry button with ID-----------
 const sinbtn = document.querySelector('#sin');
 const secbtn = document.querySelector('#sec');
 const cosbtn = document.querySelector('#cos');
 const cscbtn = document.querySelector('#csc');
 const tanbtn = document.querySelector('#tan');
 const cotbtn = document.querySelector('#cot');
+// ---------------------------------------------
 
-// ------------
-
-let tempSpanVariable;
+let tempSpanVariable;  // temporary span variable to display number
 let displayArray = [];  // Final Result Store Here
 let characterCounter = 0; // Calculate Total Charactor of Given String By User
 let degrad = 1; // For Degree To Radian Button
@@ -122,20 +137,25 @@ let fe = 0;  // For 'FE' Button
 let memoryArray = []; // To store Memory Data
 
 
+/**
+ * @function appendNumber
+ * @description to append pressed number to display
+ * @params number
+ */
+
 function appendNumber(number) {
     // create span container function
     tempSpanVariable = document.createElement('span');
     tempSpanVariable.textContent = number;
-    displayArray.push(tempSpanVariable);
-    display.append(tempSpanVariable);
+    displayArray.push(tempSpanVariable); // store value in array
+    display.append(tempSpanVariable); //append number one by one to display
 }
 
 // EventListener for Each number button
-
 zero.addEventListener("click", () => {
-    if (characterCounter < 23) {
-        characterCounter++;
-        appendNumber('0');
+    if (characterCounter < 23) { // allow only variable value is less than 23
+        characterCounter++; // every time increase its value by 1
+        appendNumber('0'); // append this number when this button pressed
     }
 })
 
@@ -211,11 +231,10 @@ dot.addEventListener("click", () => {
 
 
 // EventListener for Operator button
-
 addition_Operator.addEventListener("click", () => {
-    if (characterCounter < 23) {
-        characterCounter++;
-        appendNumber('+');
+    if (characterCounter < 23) { // allow only variable value is less than 23
+        characterCounter++;  // every time increase its value by 1
+        appendNumber('+');  // append this number when this button pressed
     }
 })
 
@@ -283,33 +302,50 @@ exponentbtn.addEventListener("click", () => {
 })
 
 
+/**
+ * @function finalResult
+ * @description its return a final result and print in display
+ * @params none
+ * @returns number
+ */
 function finalResult() {
     var input = display.textContent;
-
-    // display.value = display.value.replaceAll("**", "^");
 
     var value = input;
 
     console.log(value);
 
-    try{
+/**
+* this error handaling statemanet is handal error when user type like : 
+
+* (right case) print output:
+    example-  2+2-2 = 2
+
+* (wrong case) show error:
+    example-  2+2-2- = Invalid Input
+
+
+=> why beacuse at the we can not write any operator
+
+*/
+    try {
         function calculate(inputExpression) {
             return new Function("return " + inputExpression)();
         }
-        
+
         const result = calculate(value);
         console.log(result)
-        
+
         display.innerHTML = result;
     }
     catch (error) {
 
         display.textContent = "Invalid Input!";
 
-    setTimeout(() => {
-        display.textContent = ""; 
-        document.getElementById("input_display").value = "";
-    }, 3000);
+        setTimeout(() => {
+            display.textContent = "";
+            document.getElementById("input_display").value = "";
+        }, 3000);
     }
 }
 
@@ -379,20 +415,29 @@ fectorialbtn.addEventListener("click", () => {
     return display.textContent = result;
 });
 
+// its chage value plue to minus and minus value to pluse
+sigchangebtn.addEventListener("click", () => {
+    if (display.textContent.charAt(0) === "-") { //
+        display.textContent = display.textContent.slice(1)
+    } else {
+        display.textContent = "-" + display.textContent
+    }
+})
 
-// this function return exponential of given input number
+
+// this return exponential of given input number
 expbtn.addEventListener("click", () => {
     display.textContent = Math.exp(display.textContent)
 });
 
 
-// this function is return cude value of given number
+// this is return cude value of given number
 xcudebtn.addEventListener("click", () => {
     display.textContent = Math.pow(display.textContent, 3)
 });
 
 
-// this function will find cuberoot of given expration by user
+// this will find cuberoot of given expration by user
 cuberootbtn.addEventListener("click", () => {
     display.textContent = Math.cbrt(display.textContent)
 });
@@ -404,38 +449,37 @@ eraisedtooxbtn.addEventListener("click", () => {
 });
 
 
-// this expm1() function will returns the value of Ex minus 1
+// this will returns the value of Ex minus 1
 expmonebtn.addEventListener("click", () => {
     display.textContent = Math.expm1(display.textContent)
 });
 
 
-// this function returns the natural logarithm (base E) of 1 + a number
+// this returns the natural logarithm (base E) of 1 + a number
 logonepbtn.addEventListener("click", () => {
     display.textContent = Math.log1p(display.textContent)
 });
 
 
-// this function returns the value of 2 to the power of x:
+// this returns the value of 2 to the power of x:
 tworestooxbtn.addEventListener("click", () => {
     display.textContent = Math.pow(2, display.textContent)
 });
 
-// ------------------------------
 
-// this function returns rounds a number DOWN to the nearest integer:
+// this returns rounds a number DOWN to the nearest integer:
 floorbtn.addEventListener("click", () => {
     display.textContent = Math.floor(display.textContent)
 });
 
 
-// this function returns rounds a number Up to the nearest integer:
+// this returns rounds a number Up to the nearest integer:
 ceilbtn.addEventListener("click", () => {
     display.textContent = Math.ceil(display.textContent)
 });
 
 
-// FE_Button
+// F-E' stands for 'fixed to exponent'
 FEbtn.addEventListener("click", () => {
     if (fe) {
         display.textContent = Number(display.textContent);
@@ -460,6 +504,8 @@ degreebtn.addEventListener("click", () => {
 
 
 // Trigonometry Function starts here
+
+// SIN 
 sinbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = (Math.sin((Math.PI / 180) * Number(display.textContent)));
@@ -468,6 +514,7 @@ sinbtn.addEventListener("click", () => {
     }
 });
 
+// COS
 cosbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = (Math.cos((Math.PI / 180) * Number(display.textContent)));
@@ -476,6 +523,7 @@ cosbtn.addEventListener("click", () => {
     }
 });
 
+// TAN 
 tanbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = (Math.tan((Math.PI / 180) * Number(display.textContent)));
@@ -484,6 +532,7 @@ tanbtn.addEventListener("click", () => {
     }
 });
 
+// SEC
 secbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = 1 / (Math.cos(Math.PI / 180 * display.textContent));
@@ -492,6 +541,7 @@ secbtn.addEventListener("click", () => {
     }
 });
 
+// COT
 cotbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = 1 / (Math.tan(Math.PI / 180 * display.textContent));
@@ -500,6 +550,7 @@ cotbtn.addEventListener("click", () => {
     }
 });
 
+// CSC
 cscbtn.addEventListener("click", () => {
     if (degrad) {
         display.textContent = 1 / (Math.sin(Math.PI / 180 * display.textContent));
@@ -510,13 +561,14 @@ cscbtn.addEventListener("click", () => {
 // Trigonometry Function End here
 
 
-// this function is erase one value from the back of any displayed value
+// this is erase one value from the back of any displayed value
 backEraseButton.addEventListener("click", () => {
     display.textContent = "";
     displayArray.pop();
     tempSpanVariable = document.createElement('span');
     tempSpanVariable.classList.add('colored-text');
 
+    // this for loop run and every time it's delete one value
     for (let i = 0; i < displayArray.length; i++) {
         tempSpanVariable.append(displayArray[i].textContent)
 
@@ -539,12 +591,20 @@ clearScreen.addEventListener('click', () => {
 
 
 // Memory Function Start Here...
+
+/**
+ * @function Enable_MC_MR_Btn
+ * @description enable memoryClear and memoryRead Button
+ * @params none
+ * @returns 
+ */
 function Enable_MC_MR_Btn() {
     document.querySelector('#MemoryClear').disabled = false;
     document.querySelector('#MemoryRead').disabled = false;
 }
 
 
+// it's store memory which is currently show on display when we clicked
 MemoryStoreBtn.addEventListener('click', () => {
     Enable_MC_MR_Btn();
 
@@ -557,11 +617,13 @@ MemoryStoreBtn.addEventListener('click', () => {
 });
 
 
+// its return and display value from memory
 MemoryReadBtn.addEventListener('click', () => {
     display.textContent = memoryArray[memoryArray.length - 1];
 });
 
 
+// its delete data from memory variable
 MemoryClearBtn.addEventListener('click', () => {
     memoryArray = [];
     document.querySelector('#MemoryClear').disabled = true;
@@ -570,6 +632,7 @@ MemoryClearBtn.addEventListener('click', () => {
 })
 
 
+// this event add value(which we specify) to the memory
 MemoryPluseBtn.addEventListener('click', () => {
     Enable_MC_MR_Btn();
 
@@ -580,7 +643,7 @@ MemoryPluseBtn.addEventListener('click', () => {
     }
 })
 
-
+// this event minus value(which we specify) to the memory
 MemoryMinusBtn.addEventListener('click', () => {
     Enable_MC_MR_Btn();
 
