@@ -68,3 +68,173 @@ const cosbtn = document.querySelector('#cos');
 const cscbtn = document.querySelector('#csc');
 const tanbtn = document.querySelector('#tan');
 const cotbtn = document.querySelector('#cot');
+
+// ------------
+
+let tempSpanVariable;
+let displayArray = [];  // Final Result Store Here
+let characterCounter = 0; // Calculate Total Charactor of Given String By User
+let degrad = 1; // For Degree To Radian Button
+let fe = 0;  // For 'FE' Button
+let memoryArray = []; // To store Memory Data
+
+
+function appendNumber(number) {
+    // create span container function
+    tempSpanVariable = document.createElement('span');
+    tempSpanVariable.textContent = number;
+    displayArray.push(tempSpanVariable);
+    display.append(tempSpanVariable);
+}
+
+// EventListener for Each number button
+
+zero.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('0');
+    }
+})
+
+one.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('1');
+    }
+})
+
+two.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('2');
+    }
+})
+
+three.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('3');
+    }
+})
+
+four.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('4');
+    }
+})
+
+five.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('5');
+    }
+})
+
+six.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('6');
+    }
+})
+
+seven.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('7');
+    }
+})
+
+eight.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('8');
+    }
+})
+
+nine.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('9');
+    }
+})
+
+dot.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('.');
+    }
+})
+
+
+// EventListener for Operator button
+
+addition_Operator.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('+');
+    }
+})
+
+subtraction_Operator.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('-');
+    }
+})
+
+multiplication_Operator.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('*');
+    }
+})
+
+division_Operator.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('/');
+    }
+})
+
+modulus_Operator.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('%');
+    }
+})
+
+constantEbtn.addEventListener("click", () => {
+    if (characterCounter < 1) {
+        characterCounter++
+        appendNumber(2.718281828459045)
+    }
+})
+
+pibtn.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('3.14');
+    }
+})
+
+leftParenthesisbtn.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('(');
+    }
+})
+
+rightParenthesisbtn.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber(')');
+    }
+})
+
+exponentbtn.addEventListener("click", () => {
+    if (characterCounter < 23) {
+        characterCounter++;
+        appendNumber('**');
+    }
+})
