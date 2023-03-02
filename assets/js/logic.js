@@ -238,3 +238,30 @@ exponentbtn.addEventListener("click", () => {
         appendNumber('**');
     }
 })
+
+
+
+// FE_Button
+FEbtn.addEventListener("click", () => {
+    if (fe) {
+        display.textContent = Number(display.textContent);
+        fe = 0;
+    }
+    else {
+        display.textContent = Number(display.textContent).toExponential();
+        fe = 1;
+    }
+})
+
+// button text changed when clicked
+degreebtn.addEventListener("click", () => {
+    if (degrad == 1) {
+        document.querySelector('#degree').innerHTML = "RAD";
+        degrad = 0;
+    } else {
+        document.querySelector('#degree').innerHTML = 'DEG';
+        degrad = 1;
+    }
+})
+
+// Trigonometry Function starts here
