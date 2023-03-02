@@ -309,10 +309,54 @@ function finalResult() {
     setTimeout(() => {
         display.textContent = ""; 
         document.getElementById("input_display").value = "";
-    }, 2000);
+    }, 3000);
     }
 }
 
+// --------------------------------
+
+// this function return exponential of given input number
+expbtn.addEventListener("click", () => {
+    display.textContent = Math.exp(display.textContent)
+});
+
+
+// this function is return cude value of given number
+xcudebtn.addEventListener("click", () => {
+    display.textContent = Math.pow(display.textContent, 3)
+});
+
+
+// this function will find cuberoot of given expration by user
+cuberootbtn.addEventListener("click", () => {
+    display.textContent = Math.cbrt(display.textContent)
+});
+
+
+// this is return e to the power x is an exponential function with a base equal to 'e'
+eraisedtooxbtn.addEventListener("click", () => {
+    display.textContent = Math.pow(2.718281828459045, display.textContent)
+});
+
+
+// this expm1() function will returns the value of Ex minus 1
+expmonebtn.addEventListener("click", () => {
+    display.textContent = Math.expm1(display.textContent)
+});
+
+
+// this function returns the natural logarithm (base E) of 1 + a number
+logonepbtn.addEventListener("click", () => {
+    display.textContent = Math.log1p(display.textContent)
+});
+
+
+// this function returns the value of 2 to the power of x:
+tworestooxbtn.addEventListener("click", () => {
+    display.textContent = Math.pow(2, display.textContent)
+});
+
+// ------------------------------
 
 // this function returns rounds a number DOWN to the nearest integer:
 floorbtn.addEventListener("click", () => {
