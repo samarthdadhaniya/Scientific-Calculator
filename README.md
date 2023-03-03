@@ -108,7 +108,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 - [Preview Calculator](https://samarthdadhaniya.github.io/Scientific-Calculator/)
 
 
-<br><br>
+<br>
 
 ## Connect With Me
 <a href="https://www.instagram.com/"><img align="left" alt="codeSTACKr | Instagram" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" /></a> 
