@@ -103,14 +103,14 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 <br><br>
 
-## 🔗 Live Demonstraion
+## :rocket: Live Demonstraion
 
 - [Preview Calculator](https://samarthdadhaniya.github.io/Scientific-Calculator/)
 
 
 <br>
 
-## Connect With Me
+## 🔗 Connect With Me
 <a href="https://www.instagram.com/"><img align="left" alt="codeSTACKr | Instagram" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" /></a> 
 
 <a href="https://www.facebook.com/"><img align="left" alt="codeSTACKr | Facebook" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" /></a> 
