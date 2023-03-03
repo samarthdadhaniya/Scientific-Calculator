@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.memoer-clear-recall
+{
+    border: none;
+}
+
+.container-fluid 
+{
+    background-color: #f3f2f3;
+    font-size: 24px;
+    border-radius: 5px;
+    margin: 25px;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 25rem;
+    height: 33.6rem;
+}
+
+.buttondeg 
+{
+    margin-right: 0.7rem;
+    margin-left: 0.4rem;
+}
+.buttonred
+{
+    margin-right: 0.7rem;
+    margin-left: 0.4rem;
+}
+
+.trigosecond 
+{
+    margin-right: 0.7rem;
+    margin-left: 0rem;
+}
+.button-degree
+{
+    width: 8.5rem;
+}
+
+.button-function
+{
+    width: 8.7rem;
+}
+
+.row .button-func
+{
+    background-color: #e7e7e7;
+}
+
+.row-x .button-n
+{
+    background-color: #ffffff;
+}
+
+.row-x .button-equal 
+{
+    background-color: #76e470;
+}
+
+.row .button-delete 
+{
+    background-color: #ff5b5b;
+}
+
+.row .button-clear
+{
+    background-color: #89c0ee;
+}
+
+.input-div 
+{
+    border-radius: 6px;
+    margin-top: 0.2rem;
+    height: 3.3rem;
+    font-size: 23px;
+    border: 1px solid rgb(212, 212, 212);
+}
+
+.dropdown-trogo 
+{
+    margin-left: -0.3rem;
+    font-family: sans-serif;
+}
+
+.dropdown-func 
+{
+    margin-left: 3.5rem;
+    font-family: sans-serif;
+}
+
+.button-rendom 
+{
+    margin-left: 4.2rem;
+}
+
+#radian
+{
+    display: none;
+}
