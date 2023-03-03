@@ -101,12 +101,19 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 #### 7 ] Also, you can store memory with memory functions and perform pluses and minuses on stored memory.
 
+<br><br>
+
+## :rocket: Live Demonstraion
+
+- [Preview Calculator](https://samarthdadhaniya.github.io/Scientific-Calculator/)
+
+
 <br>
 
-## 🔗 Links
-<a href="https://www.instagram.com/"><img align="left" alt="codeSTACKr | Instagram" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" /></a>
+## 🔗 Connect With Me
+<a href="https://www.instagram.com/"><img align="left" alt="codeSTACKr | Instagram" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" /></a> 
 
-<a href="https://www.facebook.com/"><img align="left" alt="codeSTACKr | Facebook" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" /></a>
+<a href="https://www.facebook.com/"><img align="left" alt="codeSTACKr | Facebook" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" /></a> 
 
 <a href="https://www.linkedin.com/in/samarth-dadhaniya-13bb04206/"><img align="left" alt="codeSTACKr | Linkdin" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" /></a>
 
@@ -115,6 +122,6 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ## :technologist: Author
 
-- [@Samarth Dadhaniya](https://github.com/samarthdadhaniya/)
+- [@ Samarth Dadhaniya](https://github.com/samarthdadhaniya/)
 
 
