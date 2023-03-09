@@ -5,20 +5,20 @@ Project title : Scientific Calculator
 GitHub : https://github.com/samarthdadhaniya/
 ----------------------------------------------*/
 
-var display = "" // selecting display element with it's ID
-var button = document.querySelectorAll("button");
+let display = "" // selecting display element with it's ID
+let button = document.querySelectorAll("button");
 
 // getting number by id------------------------------------
-const zero = document.querySelector("#zero_Number");
-const one = document.querySelector("#one_Number");
-const two = document.querySelector("#two_Number");
-const three = document.querySelector("#three_Number");
-const four = document.querySelector("#four_Number");
-const five = document.querySelector("#five_Number");
-const six = document.querySelector("#six_Number");
-const seven = document.querySelector("#seven_Number");
-const eight = document.querySelector("#eight_Number");
-const nine = document.querySelector("#nine_Number");
+const zero = document.querySelector("#zero");
+const one = document.querySelector("#one");
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
+const four = document.querySelector("#four");
+const five = document.querySelector("#five");
+const six = document.querySelector("#six");
+const seven = document.querySelector("#seven");
+const eight = document.querySelector("#eight");
+const nine = document.querySelector("#nine");
 const dot = document.querySelector("#dot_operator");
 // ---------------------------------------------------------
 // getting basic operator select by id ----------------------------
@@ -133,61 +133,61 @@ button.forEach(button => {
     button.addEventListener('click', e => {
 
         switch (e.target.id) {
-            case "zero_Number":
+            case "zero":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "0"
                 }
                 break;
-            case "one_Number":
+            case "one":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "1"
                 }
                 break;
-            case "two_Number":
+            case "two":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "2"
                 }
                 break;
-            case "three_Number":
+            case "three":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "3"
                 }
                 break;
-            case "four_Number":
+            case "four":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "4"
                 }
                 break;
-            case "five_Number":
+            case "five":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "5"
                 }
                 break;
-            case "six_Number":
+            case "six":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "6"
                 }
                 break;
-            case "seven_Number":
+            case "seven":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "7"
                 }
                 break;
-            case "eight_Number":
+            case "eight":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "8"
                 }
                 break;
-            case "nine_Number":
+            case "nine":
                 if (characterCounter < 23) {
                     characterCounter++;
                     document.getElementById('input_display').textContent = display += "9"
@@ -378,6 +378,7 @@ fectorialButton.addEventListener("click", () => {
     }
     return document.getElementById('input_display').textContent = result;
 });
+
 
 // its chage value plue to minus and minus value to pluse
 sigchangeButton.addEventListener("click", () => {
